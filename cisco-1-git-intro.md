@@ -74,7 +74,7 @@ Here is the hidden content that drops down when you click the summary.
     ![scalability](image-14.png)
 
 1.6.4 QoS- Quality of Service
-    ![QoS](image15.png)
+    ![QoS](image-15.png)
 
 1.6.5 Network Security-
     * Confidentiality- only the authorized recipients have access to data
@@ -345,6 +345,7 @@ Here is the hidden content that drops down when you click the summary.
 3.4.1 Open Standards
     *Open standards encorage interoperability, competition, and innovation
         ![open-standards](image-79.png)
+        ![Standards-slide](image-99.png)
 
 3.4.2 Internet standards
     ![Internet-Supporters](image-80.png)
@@ -365,6 +366,7 @@ Here is the hidden content that drops down when you click the summary.
 
 3.5.4 OSI and TCP/IP model comparison
     ![OSI-TCP/IP Model Comp](image-86.png)
+    ![Comparison-slide](image-100.png)
 
 3.6.1 Segmenting Messages
     ![Segmenting Messages](image-87.png)
@@ -373,7 +375,7 @@ Here is the hidden content that drops down when you click the summary.
     ![sequencing](image-88.png)
 
 3.6.3 Protocol Dats units
-    ![Protocol Dats units](image-89.png)
+    ![Protocol Data units](image-89.png)
 
 3.7.1 Addresses
     ![Addresses](image-90.png)
@@ -397,5 +399,8 @@ Here is the hidden content that drops down when you click the summary.
     ![Host to router](image-96.png)
     ![Router to Router](image-97.png)
     ![router to server](image-98.png)
+    ** Default gateways **
+        * Tage explanation is: "Default gateways are the interface on the router facing the end device where it is configured."
+      **  ![default gateways-Slide](image-101.png)
 
 ** Module 4 **git status
