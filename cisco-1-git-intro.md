@@ -15,26 +15,26 @@ Here is the hidden content that drops down when you click the summary.
 </details>
 
 1.2.1 Host Roles
-    ![host-roles](Images/image-1.png)
-    ![peer-to-peer](Images/image.png)
+    ![host-roles](image-1.png)
+    ![peer-to-peer](image.png)
 
 1.2.3 End Devices
     * End devices are either the source or destination of a message transmitted over a network
 
 1.2.4 Intermediary devices
     *Intermediary devices connect the individual end devices to the network
-    ![Intermediary-devices](Images/image-2.png)
+    ![Intermediary-devices](image-2.png)
 
 1.2.5 * Network media-
     * Network media is the cables used to connect all devices in a network 
     -Copper
     -Fiber-optic
     -Wireless
-    ![Network-Media](Images/image-3.png)
+    ![Network-Media](image-3.png)
 
 1.3.2 Topology Diagrams- mandatory documentation
-    ![Physical-Topology](Images/image-4.png)
-    ![Logical-Topology](Images/image-5.png)
+    ![Physical-Topology](image-4.png)
+    ![Logical-Topology](image-5.png)
 
 1.4.1 Networks of Many sizes
 * 4 types of networks -
@@ -44,31 +44,31 @@ Here is the hidden content that drops down when you click the summary.
     4- World Wide- network of networks that connects hundreds of millions of computers world-wide.
 
 1.4.2 Lans and Wans
-    ![Lan](Images/image-6.png)
-    ![Lan](Images/image-7.png)
+    ![Lan](image-6.png)
+    ![Lan](image-7.png)
 
 1.4.3 The Internet- W.W.W.
-    ![World-Wide-Web](Images/image-8.png)
+    ![World-Wide-Web](image-8.png)
 
 1.4.4 Intranets and Extranets
     *Intranet- private connections of LANs and WANs that belongs to an organization
     *Extranet- provides secure and safe access to nonemployees who require access to company data.  
-    ![Levels-of-access](Images/image-9.png)
+    ![Levels-of-access](image-9.png)
 
 1.5.2 Home and Small Office Internet Connections
-    ![Home-and-Small-Office-SOHO](Images/image-10.png)
+    ![Home-and-Small-Office-SOHO](image-10.png)
 
 1.5.3 Business Internet Connections-
     *Corporate connection options differ from SOHO connections by requireing higher bandwidth, dedicated bandwidth, and managed services.
-    ![Business](Images/image-11.png)
+    ![Business](image-11.png)
 
 1.5.4 The Converging network-
     *Converged networks incorporate computer,telephone, and broadcast Networks into one "converged Network"
-    ![Converged-Network](Images/image-12.png)
+    ![Converged-Network](image-12.png)
 
 1.6.2 Fault Tolerance-
     *A network that limits the number of affected devices during a failure.
-    ![fault-tolerance](Images/image-13.png)
+    ![fault-tolerance](image-13.png)
 
 1.6.3 Scalability-
     ![scalability](image-14.png)
@@ -398,4 +398,4 @@ Here is the hidden content that drops down when you click the summary.
     ![Router to Router](image-97.png)
     ![router to server](image-98.png)
 
-** Module 4 **
+** Module 4 **git status
