@@ -408,4 +408,9 @@ Here is the hidden content that drops down when you click the summary.
 
 4.1.1 Physical connection
 
-    
+    *Wether connecting to a local printer or a website in another country, before anyComunications can occur, a physical connection to a local network must be estanlished (a physical connection can be wired using a cable or a wireless connection using radio waves)
+    * the of physical connection depends upon the setup of the network- 
+        a. Corporate offices, computer terminals are hard wired to a switch= wired network
+        b. when wireless connections are required a wireless Access point (AP) or router is used to connect the wireless devices on the network= Wireless network
+                ** A Network card (NIC) is required to gain access to any network wether wired or wireless.
+                

@@ -188,33 +188,55 @@ Destination filename [startup-config]?
 Building configuration...
 [OK]
 S2#exit
-** Commands for student-1 to switch-Class-A to
-Switch-Class-B to Student-2 **
+1. Power on the tower- it takes a while to warm up
 
-Switch>enable
-Switch#config t
-Enter configuration commands, one per line.  End with CNTL/Z.
-Switch(config)#hostname Class-B
-Class-B(config)#line console 0
-Class-B(config-line)#password R4Xe3
-Class-B(config-line)#Login
-Class-B(config-line)#enable secret C4aJa
-Class-B(config)#service password-encryption
-Class-B(config)#banner motd "Authorized access only. Violators will be prosecuted to the full extent of the law."
-Class-B(config)#interface vlan 1
-Class-B(config-if)#ip address 172.16.5.40 255.255.255.0
-Class-B(config-if)#no shutdown
-Class-B(config-if)#
-%LINK-3-UPDOWN: Interface Vlan1, changed state to down
-%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
-exit
-Class-B(config)#line vty 0 15       -FOR HOW MANY PORTS YOUR SWITCH HAS
-Class-B(config-line)#password R4Xe3
-Class-B(config-line)#login
+2. Connect necessary cables to the switch and the computer
+    a. connect the console cable
+    b. Get 2 long ethernet cables and 1 short (the cabling will be lab dependent)
+    c. Visually inspect the cabling.
+3. Configure the PC Hosts
+    a. configure the static IP addresses for the Hosts (PC)
+        click *windows button* and type "view Network connections"
+        right click "Ethernet" 
+        click properties
+        click Internet Protocol version 4(TCP/IPv4)
+        click properties & set up static IP per the lab
+        verify IP configs- Search bar- cmd- type *IPconfig* hit enter
+        check to see if the settings are correct per the lab settings
+
+4. Configure and verify basic switch settings
+    ** Commands for PC-1 to switch-1 **
+    click on the switch icon in teraferm
+
+Switch>enable                                   *changes to privileged EXEC mode*
+Switch#config t                                 *enters global config mode*
+Enter configuration commands, one per line.  End with CNTL/Z. *cautionary tale*
+Switch(config)#hostname Class-B                 *gives the device a name*
+Class-B(config)#line console 0                  *enters line config*
+Class-B(config-line)#password "*password*"      *applies the password-this is for user exec mode password*
+Class-B(config-line)#Login                      *instructs to require a password upon login*
+Class-B(config-line)#enable secret "*password*" *applies an encripted password*
+Class-B(config-line)#Login                      *instructs to require a password upon login*
+Class-B(config-line)#vty 0 15                   *FOR HOW MANY PORTS YOUR SWITCH HAS*
+Class-B(config-line)#password *password*        *to protect the switch from unwanted telnet access on all incomming lines selected*
+Class-B(config-line)#login                      *instructs to require a password upon login*
 Class-B(config-line)#exit
-Class-B(config)#exit
-Class-B#copy running-config startup-config
-Destination filename [startup-config]?
+Class-B(config)#service password-encryption     *encrypts the passwords hiding the plain text settings*
+Class-B(config)#banner motd "Message of the Day"*put an appropriate message here to warn of unotherized use etc.*
+Class-B(config)#interface vlan 1                *enters the interface config*
+Class-B(config-if)#ip address                   *set IP address per lab instructions* 255.255.255.0 (subnet mask will always be this for the duration of this class)
+Class-B(config-if)#no shutdown                  *keeps the line up and operational*
+Class-B(config-if)#
+        (%LINK-3-UPDOWN: Interface Vlan1, changed state to down -
+        %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up     *message displayed after you set the no shutdown)
+Class-B(config-if)#exit                         *to exit interface config mode*                        
+Class-B(config)#exit                            *to exit terminal config mode*  
+Class-B#show run                                *this will show you the running configuration settings*
+Class-B#copy running-config startup-config      *used to copy the running config from VRAM to NVRAM - sort-cut "copy run start"*
+Destination filename [startup-config]? *hit enter*
 Building configuration...
 [OK]
-Class-B#exit
+Class-B#exit                                    *exits the privelegd EXEC mode and sets you back at the start*
+
+
+
