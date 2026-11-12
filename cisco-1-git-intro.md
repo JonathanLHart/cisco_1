@@ -8,7 +8,8 @@ This is my first document stored in Git.
 - GitHub stores my repository online.
 - **SSH keys** keep my account secure
 
--<details>
+
+<details>
 <summary>Click to expand</summary>
 
 Here is the hidden content that drops down when you click the summary.
@@ -404,3 +405,7 @@ Here is the hidden content that drops down when you click the summary.
       **  ![default gateways-Slide](image-101.png)
 
 ** Module 4 **git status
+
+4.1.1 Physical connection
+
+    
