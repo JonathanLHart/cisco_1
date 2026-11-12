@@ -207,6 +207,7 @@ S2#exit
 4. Configure and verify basic switch settings
     ** Commands for PC-1 to switch-1 **
     click on the switch icon in teraferm
+    hit enter and get started
 
 Switch>enable                                   *changes to privileged EXEC mode*
 Switch#config t                                 *enters global config mode*
@@ -233,7 +234,7 @@ Class-B(config-if)#exit                         *to exit interface config mode*
 Class-B(config)#exit                            *to exit terminal config mode*  
 Class-B#show run                                *this will show you the running configuration settings*
 Class-B#copy running-config startup-config      *used to copy the running config from VRAM to NVRAM - sort-cut "copy run start"*
-Destination filename [startup-config]? *hit enter*
+Destination filename [startup-config]?          *hit enter to continue*
 Building configuration...
 [OK]
 Class-B#exit                                    *exits the privelegd EXEC mode and sets you back at the start*
