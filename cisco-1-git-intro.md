@@ -413,4 +413,6 @@ Here is the hidden content that drops down when you click the summary.
         a. Corporate offices, computer terminals are hard wired to a switch= wired network
         b. when wireless connections are required a wireless Access point (AP) or router is used to connect the wireless devices on the network= Wireless network
                 ** A Network card (NIC) is required to gain access to any network wether wired or wireless.
-                
+5.2.2   *video*
+     *** Hexadecimal to Decimal convertion           
+    ![Hexa-Deci](image-102.png)
