@@ -407,8 +407,7 @@ Here is the hidden content that drops down when you click the summary.
 ** Module 4 **git status
 
 4.1.1 Physical connection
-
-    *Wether connecting to a local printer or a website in another country, before anyComunications can occur, a physical connection to a local network must be estanlished (a physical connection can be wired using a cable or a wireless connection using radio waves)
+    *Wether connecting to a local printer or a website in another country, before any Comunications can occur, a physical connection to a local network must be estanlished (a physical connection can be wired using a cable or a wireless connection using radio waves)
     * the of physical connection depends upon the setup of the network- 
         a. Corporate offices, computer terminals are hard wired to a switch= wired network
         b. when wireless connections are required a wireless Access point (AP) or router is used to connect the wireless devices on the network= Wireless network
@@ -416,3 +415,87 @@ Here is the hidden content that drops down when you click the summary.
 5.2.2   *video*
      *** Hexadecimal to Decimal convertion           
     ![Hexa-Deci](image-102.png)
+
+    **Module 8**
+
+8.1.1 Network Layer:
+        -Internet Protocol versin 4 (IPv4)
+        -Internet Protocol versin 6 (IPv6)
+    ![Network Layer Protocol operations](image-103.png)
+    Data travels through the layers = 
+    Application-Presentation-Session-Transport-network-data Link-Physical "Network layer protocols forward transport layer PDUs betweeen hosts then sends them back in reverse order to destination device*
+
+8.1.2 IP Encapsulation 
+    *IP encapsulates the transport layer (the Layer just above the network layer) segment or other data by adding an IP header. The Ip header is used to deliver the packet to the destination host.
+        -enables the services at different layers to develope and scale without affecting other layers.
+        -examined by Layer 3 devices, *routers *Layer 3 switches
+                **Note- IP remains the same except when translated by devices using NAT for IPv4
+    
+8.1.3 Characteristics of IP
+    *Basic characteristics
+        -8.1.4 Connectionless - No connection with destination established before sending data packets
+        -8.1.5 Best Effort - IP is inherently unreliable because packet delivery is not guaranteed
+        -8.1.6 Media Independent - dosent care how it gets there.
+                **one charachteristic to note is the maximum size of the packet the media can transmit and in some cases an intermediate device must split up an IPv4 packet with a smaller MTU called "Fragmenting" (IPv6 packets can't be fragmented)**
+
+8.2.2 IPv4 Packet
+    ![IPv4 Packet Header Fields](image-104.png)
+    *Binary values of each field identify various settings of the IP packet.
+        -2 most commonly referenced - source and destination
+        -The Internet Header length (IHL), Total Length, Header Checksum fields used to identify and validate packet
+        -Other fields are used to reorder a fragmented packet.
+        _Options and Padding fields are rarely used
+
+8.3.1 IPv6 overview
+    ![IPv4 in the IPv6 Packet header](image-105.png)
+
+8.3.4 Fields in the IPv6 Header
+    ![IPv6 Packet Fields](image-106.png)
+
+8.4.1 Host Forwarding Decision
+    ![Host Forwarding](image-107.png)
+    *Both IPv4 and IPv6 packets are created at the source host and another role of the network layer is to direct packets to the destination host, thus it creates its own "Routing Table"
+        *Host can send a packet to:
+            -itself-ping 127.0.0.1 - (::1 for IPv6)
+            -Local Host destination host on the same network
+            -remote host on a different network
+
+8.4.2 Default Gateway
+    *Network device that routs traffic to other networks, usually a Router with these features;
+        -Has a Local IP address in the same address range as other hosts on the Local Network
+        -Can accept and forward data into and out of the local Network
+        -Routes traffic to other networks
+            **default gateway is required to send traffic outside the local network and can't if no gateway, address not configed, gateway is down**
+    ![8.4.3 Host route to default gateway](image-108.png)
+
+8.4.4 Host Routing Table
+    *route print or netstat -r commands list the routing table.<b>
+    ![IPv4 Routing table example](image-109.png)
+
+        There are 3 settings required for IPv4 configuration: 
+                1. IP address,      -The IP address is the unique identifier for the device on the network.
+                2. Subnet mask,     -The subnet mask is used to determine which portion of the IP address represents the network and which portion represents the host.
+                3. Default gateway, -The default gateway is the IP address of the router that connects the local network to other networks, including the internet.    
+        
+            Loopback Address- A way to communicate with the local host without using a physical network interface. The loopback address is typically used for testing and troubleshooting network applications and services. 
+                    -The most commonly used loopback address is 127.0.0.1 - tests the OSI and TCP/IP stack on the local machine.
+                    -::1 in IPv6 (ping to test the local machine is ::1)
+                    *Start close and work away out- ping the local machine first, then the next closest device, and so on until you reach the destination device.*
+        
+            How to read a router's Routing table (R1# show ip route- gives you the routing table for the router)
+                three parts:
+                    -How route was learned
+                     -directly connected
+                     -remote (Anything not C,L )
+                     -Default
+        
+
+8.5.1 Router Packet Forwarding Decision
+    ![Router Packet forwarding](image-110.png)
+
+8.5.3 Static Routing
+    *Static routes are entries that are MANUALLY configured and:
+        -care onfigured manually
+        -needs Admin to reconfigure the static route if the topology and static route are unavailable
+        -are approriate for small network where there are few or no redundant links
+![Static Routing](image-111.png)
